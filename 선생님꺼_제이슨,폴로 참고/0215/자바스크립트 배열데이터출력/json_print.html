@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 json데이터 출력하기</title>
+  <style>
+    .car_reverse{
+      border:1px solid #ccc;
+      border-collapse:collapse;
+      width:1000px;
+      margin:0px auto 30px auto;
+    }
+    .car_reverse caption{
+        font-weight:bold;
+        font-size:20px;
+        padding:20px 0px;
+    }
+    .car_reverse td, .car_reverse th{
+        border:1px solid #ccc;
+        line-height:34px;
+        text-align:center;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(function(){
+      // $.getJSON('./data/test_drive.json', function(data){
+      //   for(key in data){
+      //     console.log('이름 : ' + data[key].phone);
+      //     document.write('<p>지역명 : ' + data[key].region + '</p>');
+      //     document.write('<p>시승 신청일 : ' + data[key].e_date + '</p>');
+      //   }
+      // })
+    
+    $.getJSON('./data/test_drive.json', function(data){
+      let html ='<table class="car_reverse"><caption>시승신청 예약현황</caption><tr><th>번호</th><th>이름</th><th>전화번호</th><th>SNS</th><th>이메일</th><th>시승차량</th><th>보유차량</th><th>시승날짜</th></tr>';
+      // document.write('<table>');
+      // document.write('<caption>시승신청 예약현황</caption>');
+      // document.write('<tr><th>번호</th><th>이름</th><th>전화번호</th><th>SNS</th><th>이메일</th><th>시승차량</th><th>보유차량</th><th>시승날짜</th></tr>');
+      
+        for(key in data){
+          // document.write('<tr>');
+            html+=`<tr>`;
+            for(let i in data[key]){
+              // document.write(`<td>${data[key][i]}</td>`);
+              html+=`<td>${data[key][i]}</td>`;
+            }
+          // document.write('</tr>');
+          html+=`</tr>`
+        }
+      // document.write('</table>');
+      html+=`</table>`;
+      $('.list').html(html)
+    });
+    
+    // for(key in data){
+    //   document.write('<tr>');
+    //   document.write(`<td>${data[key].code}</td>`);
+    //   document.write(`<td>${data[key].name}</td>`);
+    //   document.write(`<td>${data[key].phone}</td>`);
+    //   document.write(`<td>${data[key].sms}</td>`);
+    //   document.write(`<td>${data[key].email}</td>`);
+    //   document.write(`<td>${data[key].region}</td>`);
+    //   document.write(`<td>${data[key].s_car}</td>`);
+    //   document.write(`<td>${data[key].my_car}</td>`);
+    //   document.write(`<td>${data[key].e_date}</td>`);
+    //   document.write('</td>');
+    // }
+
+    // document.write('<table>');
+    //   document.write('<caption>시승예약 현황</caption>');
+    //   for(let i=0;i<=10;i++){
+    //     document.write('<tr>');
+    //     for(let j=1;j<=10;j++){
+    //       document.write('<td>' + j + '</td>');
+    //     } 
+    //     document.write('</tr>'); 
+    //   }
+    //   document.write('</table>');
+
+    // $.each활용 방법
+
+            // let car_data="";
+            // $.each(data,function(key,value){
+            // console.log(key);
+            // car_data+="<tr>"
+            // car_data+="<td>"+value.code+"</td>"
+            // car_data+="<td>"+value.name+"</td>"
+            // car_data+="<td>"+value.phone+"</td>"
+            // car_data+="<td>"+value.messenger+"</td>"
+            // car_data+="<td>"+value.email+"</td>"
+            // car_data+="<td>"+value.region+"</td>"
+            // car_data+="<td>"+value.s_car+"</td>"
+            // car_data+="<td>"+value.my_car+"</td>"
+            // car_data+="<td>"+value.date+"</td>"
+            // car_data+="</tr>"
+            // });
+            // $("#car_table").append(car_data);
+  });
+  </script>
+</head>
+<body>
+  <h2>자바스크립트 json데이터 출력하기</h2>
+  <p>닷홈 SQL데이터 베이스에 저장된 'test_drive'테이블의 자료를 'json'파일로 저장하여 자바스크립트로 출력해보기</p>
+
+  <article class="list"></article>
+</body>
+</html>

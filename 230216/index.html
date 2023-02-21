@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polo Lauren - 반응형</title>
+  <!-- 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <link rel="stylesheet" href="./css/base.css" type="text/css">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="stylesheet" href="./css/main.css" type="text/css">
+  <script src="./script/prefixfree.min.js"></script>
+  <!-- 제이쿼리 라이브러리  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- jQuery UI 라이브러리 -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="./script/main.js" defer></script>
+  <script>
+    //배열객체를 사용하여 스마트폰의 종류를 작성한다.
+    let mobile = new Array['Android','iPhone','iPad','SAMSUNG','BlackBerry','Window CE','MOT','SonyErisson','Nokia','vivo','Xiaomi'];
+
+    //만약에 위 배열 값 개수만큼 반복하여 사용자가 접속한 스마트폰의 종류를 체크하여 맞다면 아래 내용을 실행한다.
+    for(let i in mobile){//in 키워드 값이 있으면 true, 없으면 false
+      if(nabigator.userAgent.match(mobile[i])!=null){//일치하는게 있으면
+        location.href='je1009.dothome.co.kr/230209/mindex.html';//모바일로 접속한다.
+        break;
+      }
+    }
+
+    //모바일에서 pc보기를 클릭해서 다시 pc페이지가 보이게 하기
+    if(document.URL.match('move_pc_screen'))mobile = null;
+    
+  </script>
+</head>
+<body>
+  <!-- 상단헤더 -->
+  <header>
+    <h1>
+      <a href="index.html" title="메인페이지로 바로가기">
+        <img src="./image/logo-white.svg" alt="상단로고">
+      </a>
+    </h1>
+
+    <nav class="gnb">
+      <ul>
+        <li>
+          <a href="#none" title="">Polo ralph lauren</a>
+        <!-- <div class="s_background sub01">&nbsp;</div> -->
+        <ul class="sub">
+            <li>
+              <a href="#none">RL 50주년</a>
+            </li>
+              <li>
+                <a href="#none">랄프 로렌: The Man</a>
+              </li>
+                <li>
+                  <a href="#none">CYO 커스텀 샵</a>
+                </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#none" title="">Season</a>
+        <!-- <div class="s_background sub02">&nbsp;</div> -->
+        <ul class="sub">
+            <li>
+              <a href="#none">Spring 2023 컬렉션</a>
+            </li>
+            <li>
+              <a href="#none">Fall/Winter 2022 컬렉션</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#none" title="">Product</a>
+        <!-- <div class="s_background sub03">&nbsp;</div> -->
+        <ul class="sub">
+            <li>
+              <a href="#none">남성</a>
+            </li>
+            <li>
+              <a href="#none">여성</a>
+            </li>
+            <li>
+              <a href="#none">키즈</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#none" title="">Event</a>
+        <!-- <div class="s_background sub04">&nbsp;</div> -->
+        <ul class="sub">
+            <li>
+              <a href="#none">시즌오프</a>
+            </li>
+            <li>
+              <a href="#none">50주년</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#none" title="">Story</a>
+        <!-- <div class="s_background sub05">&nbsp;</div> -->
+        <ul class="sub">
+            <li>
+              <a href="#none"></a>
+            </li>
+            <li>
+              <a href="#none"></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#none" title="">공지사항</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 헤더아이콘 -->
+    <ul class="header_icons">
+      <li><a href="#none" title="facebook"><i class="fas fa-search"></i></a></li>
+      <li><a href="#none" title="instagram"><i class="fas fa-heart"></i></a></li>
+      <li><a href="#none" title="youtube"><i class="fas fa-user"></i></a></li>
+      <li><a href="#none" title="youtube"><i class="fas fa-shop"></i></a></li>
+    </ul>
+  </header>
+
+  <!-- 메인콘텐츠 영역 -->
+  <main>
+    <!-- 슬라이드 -->
+    <section id="visual_slide">
+      <h2>메인슬라이드</h2>
+      <div>
+        <span><img src="./image/2018_polo_white_logo.svg" alt=""></span>
+        <video autoplay muted loop='infinite'>
+          <source src="./movie/main_banner01.mp4" type="video/webm">
+        </video>
+      </div>
+
+      <div>
+        <span><img src="./image/2018_polo_white_logo.svg" alt=""></span>
+        <video autoplay muted loop='infinite'>
+          <source src="./movie/main_banner02.mp4" type="video/webm">
+        </video>
+      </div>
+
+      <!-- 좌,우 방향버튼 -->
+      <ul class="s_btn"> <!--선생님은 png로함-->
+        <li><i class="fas fa-angle-left"></i></li>
+        <li><i class="fas fa-angle-right"></i></li>
+      </ul>
+
+      <!-- 콘트롤버튼 -->
+      <ul class="ctrl_btn">
+        <li class="on">&nbsp;</li>
+        <li>&nbsp;</li>
+      </ul>
+    </section>
+    <!-- 소개 -->
+    <section id="intro">
+      <h2>Polo ralph lauren</h2>
+      <article>
+        <div class="video01">
+        <video autoplay muted loop='infinite'>
+          <source src="./movie/introduce.mp4" type="video/webm">
+        </video>
+        </div>
+        <div class="txt01">
+          <img src="./image/logo-white.svg" alt="로고">
+          <p>오랜 시간 사랑받는 웰메이드 의류에서 영감받은 Polo Ralph Lauren은<br>
+            러기드 스타일과 학문적 전통의 세련미가 절묘하게 어우러지는<br>
+            영국의 테일러링 유산이 살아있는 스코틀랜드의 스타일을 선보입니다.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- 시즌 -->
+    <section id="tab_con">
+      <h2>season</h2>
+      <article class="tcon">
+        <h2><img src="./image/hero_logo.png" alt="로고"></h2>
+        <ul>
+          <li>
+            <a href="#none" class="tab_on">2023  s/s</a>
+            <div class="cont">
+              “미국 서부 해안의 자연미와 문화적 유산, 화려한 매력은 영감이 되었습니다.<br>
+              캘리포니아는 영원한 꿈의 땅이며, 거친 해안과 레드 카펫이라는 상반된 매력이 있습니다.<br>
+              처음으로 저는 여기에서 살고 싶은 꿈을 반영하여, 항상 추구해온 삶의 방식,<br>
+              즉  불굴의 정신과 매력, 에너지, 영감이 어우러진 경험을 통해 제 세계를 공유합니다.”
+            </div>
+          </li>
+
+          <li>
+            <a href="#none">2022 f/w</a>
+            <div class="cont">
+              “나의 FALL/WINTER 2022 컬렉션은 남성과 여성 모두를 위한 날렵한 테일러드 실루엣으로<br>
+              대담하게 블랙과 화이트의 시대를 초월한 스타일을 기념합니다.<br>
+              우리가 다시 뭉쳤을 때 뉴욕 MOMA의 상징적인 아름다움에 내포된 이 친밀한 환경에서<br>
+              이 컬렉션을 공유하고 싶었습니다.” - 랄프 로렌
+            </div>
+          </li>
+
+          <li>
+            <a href="#none">RLX x Clarus</a>
+            <div class="cont">
+              CLARUS® 섬유는 버진 면과 재활용된 면을 재료로 하는 시중 최초의 특허를 받은플랫폼에서<br>
+              제작되었습니다. 해당 기술로 탄생한 소재는 기능성을 위해 석유 기반의화석 연료를<br>
+              사용하는 폴리에스터와 나일론 같은 플라스틱 기반의 합성 섬유와 비슷한 기능을 제공합니다.
+            </div>
+          </li>
+        </ul>
+      </article>
+    </section>
+      
+    <!-- 상품목록 -->
+    <section id="product">
+      <h2>product</h2>
+      <article>
+        <h2>Spring</h2>
+        <p>편안한 테일러링, 부드러운 니트와 세련된 악세서리의 조합으로 클래식 원크데이 스타일을 만나보세요</p>
+        <ul>
+          <li>
+            <a href="#none" title="상품01">
+              <img src="./image/produnct01.jpg" alt="상품01">
+              <p>폴로 소프트 스트레치 치노 수트 재킷</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="#none" title="상품02">
+              <img src="./image/produnct02.jpg" alt="상품02">
+              <p>테일러드 슬림핏 폴로 프렙스터 팬츠</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="#none" title="상품03">
+              <img src="./image/produnct03.jpg" alt="상품03">
+              <p>클래식핏 옥스포드 웨스턴 셔츠</p>
+            </a>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- 5.  이벤트 -->
+    <section id="event">
+      <h2>이벤트</h2>
+      <article>
+        <h2 class="c_title">EVENT</h2>
+        <div class="e_slide">
+          <div class="s_wrap">
+            <figure>
+              <img src="./image/event01.jpg" alt="이벤트1">
+              <figcaption>
+                <span>종료</span>
+                <p>폴로랄프로렌 50주년 기념 이벤트</p>
+                <p class="date">2022.03.30 ~ 2022.04.01</p>
+              </figcaption>
+            </figure>
+            
+            <figure>
+                <img src="./image/event02.jpg" alt="이벤트2">
+                <figcaption>
+                  <span class="e_ing">진행중</span>
+                  <p>Gift Event</p>
+                  <p class="date">2022.08.16 ~ 2022.09.31</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="./image/event01.jpg" alt="이벤트3">
+                <figcaption>
+                  <span >종료</span>
+                  <p>패밀리 이벤트</p>
+                  <p class="date">2022.03.30 ~ 2022.04.20</p>
+                </figcaption>
+            </figure>
+          </div>
+          </div>
+          <i class="fas fa-angle-left"></i>
+          <i class="fas fa-angle-right"></i>   
+      </ariticle>
+    </section>
+
+    <!-- story -->
+    <section id="gallery">
+			<article>
+				<h2>Brand Story</h2>
+				<div class="story">
+					<figure>
+				<a href="#none" title="">
+					<img src="./image/story01.jpg" alt="">
+				</a>
+				<figcaption>
+					<a href="#none" title="">
+						<h6>헤로티지</h6>
+						<p>폴로역사</p>
+						<span>영상보기</span>
+					</a>
+				</figcaption>
+			</figure>
+					<figure>
+				<a href="#none" title="">
+					<img src="./image/story04.jpg" alt="">
+				</a>
+				<figcaption>
+					<a href="" title="">
+						<h6>신발</h6>
+						<p>폴로신발</p>
+						<span>영상보기</span>
+					</a>
+				</figcaption>
+			</figure>
+				
+					<figure>
+				<a href="#none" title="">
+					<img src="./image/story02.jpg" alt="">
+				</a>
+				<figcaption>
+					<a href="#none" title="">
+						<h6>폴로</h6>
+						<p>남성&여성</p>
+					</a>
+				</figcaption>
+			</figure>
+				
+					<figure>
+				<a href="#none" title="">
+					<img src="./image/story03.jpg" alt="">
+				</a>
+				<figcaption>
+					<a href="#none" title="">
+						<h6>키즈</h6>
+						<p>폴로키즈</p>
+					</a>
+				</figcaption>
+			</figure>
+				
+					<figure>
+				<a href="#none" title="">
+					<img src="./image/story05.jpg" alt="">
+				</a>
+				<figcaption>
+					<a href="#none" title="">
+						<h6>홈</h6>
+						<p>폴로리빙</p>
+					</a>
+				</figcaption>
+			</figure>
+					<figure>
+				<a href="#none" title="">
+					<img src="./image/story06.jpg" alt="">
+				</a>
+				<figcaption>
+					<a href="#none" title="">
+						<h6>기프트</h6>
+						<p>폴로선물</p>
+						<span>영상보기</span>
+					</a>
+				</figcaption>
+			</figure>
+					<figure>
+				<a href="#none" title="">
+					<img src="./image/story07.jpg" alt="">
+				</a>
+				<figcaption>
+					<a href="#none" title="">
+						<h6>가방</h6>
+						<p>폴로가방</p>
+						<span>영상보기</span>
+					</a>
+				</figcaption>
+			</figure>
+					<figure>
+				<a href="#none" title="">
+					<img src="./image/story08.jpg" alt="">
+				</a>
+				<figcaption>
+					<a href="#none" title="">
+						<h6>이벤트</h6>
+						<p>폴로가방</p>
+						<span>영상보기</span>
+					</a>
+				</figcaption>
+			</figure>
+				</div>
+        
+        <p class="m_box">
+          <a href="#none" title="더보기">더보기</a>
+        </p>
+        
+        <!-- 추가 갤러리 리스트 -->
+        <div id="list"></div>
+
+			</article>
+		</section>
+  </main>
+
+  <!-- 푸터영역 -->
+  <footer>
+    <ul class="f_mnu">
+      <li><span style="font-weight: bold; cursor: pointer;">ABOUT</span>
+        <ul class="f_info">
+          <li><a href="#none" title="랄프 로렌 소개">랄프 로렌 소개</a></li>
+          <li><a href="#none" title="World of R">World of R</a></li>
+          <li><a href="#none" title="브랜드 보호">브랜드 보호</a></li>
+          <li><a href="#none" title="반품">반품</a></li>
+          <li><a href="#none" title=">개인정보 처리방침">개인정보 처리방침</a></li>
+          <li><a href="#none" title="이용약관">이용약관</a></li>
+          <li><a href="#none" title="판매약관">판매약관</a></li>
+          <li><a href="#none" title="사업자 정보">사업자 정보</a></li>
+          <li><a href="#none" title="쿠키 공지">쿠키 공지</a></li>
+          <li><a href="#none" title="이용약관">이용약관</a></li>
+        </ul>
+      </li>
+
+      <li><span style="font-weight: bold; cursor: pointer;">계정</span>
+        <ul class="f_info">
+          <li><a href="#none" title="내 계정">내 계정</a></li>
+          <li><a href="#none" title="주문 확인">주문 확인</a></li>
+        </ul>
+      </li>
+      
+      <li><span style="font-weight: bold; cursor: pointer;">고객센터</span>
+        <ul class="f_info">
+          <li><a href="#none" title="COVID-19 관련 소식">COVID-19 관련 소식</a></li>
+          <li><a href="#none" title="도움말">도움말</a></li>
+          <li><a href="#none" title="배송">배송</a></li>
+          <li><a href="#none" title="반품">반품</a></li>
+          <li><a href="#none" title="나만의 핏 찾기">나만의 핏 찾기</a></li>
+          <li><a href="#none" title="매장 서비스">매장 서비스</a></li>
+          <li><a href="#none" title="사이트 맵">사이트 맵</a></li>
+        </ul>
+      </li>
+    </ul>
+    <address>
+      <span style="color:var(--f-color03);">Connect with us </span>&copy;COPYRIGHT 2022 RALPH LAUREN. ALL RIGHTS RESERVED.
+    </address>
+    <img src="./image/logo-white.svg" alt="logo">
+  </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 json데이터 출력하기</title>
+  <style>
+    table{
+      border:1px solid #333;
+      border-collapse: collapse;
+      width:1000px;
+    }
+    th, td{
+      border:1px solid #333;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $.getJSON('./data/test_drive.json', function(data){
+        for(key in data){
+          console.log('이름 : ' + data[key].phone);
+          document.write('<p>' + data[key].region + '</p>');
+          document.write('<p>' + data[key].e_date + '</p>');
+        }
+      })
+    });
+    // document.write('<table>');
+    //   document.write('<caption>시승예약 현황</caption>');
+    //   for(let i=0;i<=10;i++){
+    //     document.write('<tr>');
+    //     for(let j=1;j<=10;j++){
+    //       document.write('<td>' + j + '</td>');
+    //     } 
+    //     document.write('</tr>'); 
+    //   }
+    //   document.write('</table>');
+  </script>
+</head>
+<body>
+  <h2>자바스크립트 json데이터 출력하기</h2>
+  <p>닷홈 SQL데이터 베이스에 저장된 'test_drive'테이블의 자료를 'json'파일로 저장하여 자바스크립트로 출력해보기</p>
+
+</body>
+</html>

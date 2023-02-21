@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>라면정보 데이터 출력</title>
+  <!-- 부트스트랩 서식 -->
+  <link href="./css/bootstrap.css" rel="stylesheet" type="text/css">
+
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <!-- 부트스트랩 스크립트 -->
+  <script src="./script/bootstrap.js"></script>
+  <script>
+    $(function(){
+      $.getJSON('./data/noodle.json', function(data){ //데이터 로딩하기
+        let noodle = `
+          <table class="table table-striped table-hover">
+            <caption>라면정보 데이터 출력</caption>
+            <thead class="table-dark">
+              <tr><th>No</th><th>제품명</th><th>회사명</th><th>용기</th><th>가격</th><th>생산날짜</th></tr>
+            </thead><tbody>
+        `/*
+        for(변수 in 객체){
+          객체의 모든 열거할 수 있는 속성의 개수만큼 반복적으로 실행하고자 하는 실행문을 작성
+        }
+      */
+        for(let key in data){
+          noodle+=`<tr>`;
+            if(data[key].kind=='M'){
+              data[key].kind='컵라면';
+            }else{
+              data[key].kind='봉지라면';
+            }
+            for(let i in data[key]){
+              noodle+=`<td>
+                ${data[key][i]}
+                </td>`;
+            }
+          noodle+=`</tr>`;
+        }
+        noodle+=`</tbody></table>`;
+        $('#noodle_box').html(noodle);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>라면정보 json데이터 배열로 출력하기</h2>
+  <p>SQL데이터 테이블 noodle에서 json데이터를 내려받아 자바스크립트 배열객체를 활용하여 데이터를 출력한다.</p>
+  <p>출력데이터는 테이블 방식으로 출력을 하고 부트스트랩의 클래스 서식을 적용하여 꾸민다.</p>
+
+  <article id="noodle_box">
+  </article>
+
+</body>
+</html>

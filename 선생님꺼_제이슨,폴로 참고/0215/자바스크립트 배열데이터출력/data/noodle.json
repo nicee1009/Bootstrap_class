@@ -1,0 +1,8 @@
+[
+{"num":"1","name":"안성탕면","company":"농심","kind":"M","price":"700","e_date":"2013-10-16"},
+{"num":"2","name":"김치라면","company":"삼양","kind":"M","price":"700","e_date":"2013-10-16"},
+{"num":"3","name":"진라면","company":"오뚜기","kind":"C","price":"800","e_date":"2013-10-16"},
+{"num":"4","name":"꼬꼬면","company":"팔도","kind":"C","price":"1000","e_date":"2013-10-16"},
+{"num":"5","name":"신라면","company":"농심","kind":"C","price":"1100","e_date":"2013-10-16"},
+{"num":"6","name":"안성탕면","company":"농심","kind":"C","price":"3000","e_date":"2022-01-30"}
+]

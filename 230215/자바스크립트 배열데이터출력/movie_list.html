@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>영화데이터 (json)과 부트스트랩을 활용하여 데이터 출력하기</title>\
+  <!-- 부트스트랩 서식 -->
+  <link rel="stylesheet" href="./css/bootstrap.css" type="text/css">
+
+  <!-- 제이쿼리 라이브러리  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- 부트스트랩 스크립트 -->
+  <script src="./script/bootstrap.js"></script>
+  <script>
+    $(function(){
+      //1.json데이터 가져오기
+      $.getJSON('./data/movie.json',function(data){
+        let movie = `
+          <table class="table table-striped table-hover">
+          <caption hidden>영화 순위</caption>
+          <thead class="table-dark">
+            <tr>
+            <th>순번</th><th>순위</th><th>영화제목</th><th>개봉일</th><th>일일관객수</th>
+            </tr>
+          </thead><tbody>
+        `
+        for(let key in data){
+          movie+=`<tr>`;
+            for(let i in data [key]){
+              movie+=`<td>
+                ${data [key] [i]}
+                </td>`;
+            }
+            movie+=`</tr>`;
+        }
+        movie+=`</tbody>
+          </table>
+
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group">
+              <button type-"button" class="btn btn-primary">1</button>
+              <button type-"button" class="btn btn-primary">2</button>
+              <button type-"button" class="btn btn-primary">3</button>
+              <button type-"button" class="btn btn-primary">4</button>
+              </div>
+            </div>
+
+
+          <p class='form-check-reverse'>
+            <a href="#" title="글쓰기" class="btn btn-primary" role="button">글쓰기</a>
+          </p>`;
+
+        $('#movie').html(movie);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>영화데이터 (json)과 부트스트랩을 활용하여 데이터 출력하기</h2>
+  <p>영화 진흥위원회에서 제공하는 영화 api데이터를 활용하여 데이터 출력하고 부트스트랩 테이블 서식을 적용한다.</p>
+
+
+  <article id="movie">
+  </article>
+</body>
+</html>

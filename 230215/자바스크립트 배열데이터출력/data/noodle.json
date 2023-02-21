@@ -1,0 +1,13 @@
+
+[
+{"num":"1","name":"안성탕면","company":"농심","kind":"M","price":"700","e_date":"2013-10-16"},
+{"num":"2","name":"김치라면","company":"삼양","kind":"M","price":"700","e_date":"2013-10-16"},
+{"num":"3","name":"진라면","company":"오두기","kind":"C","price":"800","e_date":"2013-10-16"},
+{"num":"4","name":"꼬꼬면","company":"팔도","kind":"C","price":"1000","e_date":"2013-10-16"},
+{"num":"5","name":"신라면","company":"농심","kind":"C","price":"1100","e_date":"2013-10-16"},
+{"num":"6","name":"삼양라면","company":"삼양","kind":"M","price":"700","e_date":"2013-10-16"},
+{"num":"7","name":"너구리","company":"농심","kind":"M","price":"850","e_date":"2013-10-16"},
+{"num":"8","name":"나가사키짬뽕","company":"삼양","kind":"C","price":"1300","e_date":"2013-10-16"},
+{"num":"9","name":"짜파게티","company":"농심","kind":"C","price":"1200","e_date":"2013-10-16"},
+{"num":"10","name":"짬뽕라면","company":"오뚜기","kind":"c","price":"1000","e_date":"2023-02-08"}
+]

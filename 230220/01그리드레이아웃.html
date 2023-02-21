@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    div{
+      background: #ccc;
+      border: 1px solid #333;
+    }
+  </style>
+
+  <title>부트스트랩_01그리드 레이아웃</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+  <h1>부트스트랩에서 그리드 레이아웃 사용하기</h1>
+  <p>부트스트랩은 하나의 행에 반트시 12개의 열(컬럼)을 사용해야 합니다.</p>
+  <p>만약 12개의 열(컬럼)을 모두 사용하지 않으려면, 더 넓은 열(컬럼)을 만들기 위해 열(컬럼)들을 하나의 그룹으로 만들어 사용하실 수 있습니다.</p>
+
+  <h2>그리드 시스템에서는 화면의 너비별 4개의 클래스를 가지고 있습니다.</h2>
+  <ul>
+    <li>xs - 스마트폰용, 화면의 넓이가 768px이하 일 때</li>
+    <li>sm - 태블릿용, 화면의 넓이가 768보다 크거나 같을 때</li>
+    <li>md - 큰 태블릿용, 작은 노트북용, 화면의 넓이가 992px보다 크거나 같을 때</li>
+    <li>lg - 일반 노트북, 데스크탑 pc, 화면의 넓이가 1200px보다 크거나 같을 때</li>
+  </ul>
+
+  <h3>그리드 레이아웃 실습</h3>
+  <div class="row">
+    <div class="col-lg-12">컬럼을 한줄로 배치</div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-4">12컬럼을 4칸씩 병합</div>
+    <div class="col-md-4">12컬럼을 4칸씩 병합</div>
+    <div class="col-md-4">12컬럼을 4칸씩 병합</div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-6">12컬럼을 6칸씩 병합</div>
+    <div class="col-sm-6">12컬럼을 6칸씩 병합</div>
+  </div>
+</body>
+</html>

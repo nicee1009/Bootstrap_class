@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* 기본서식 */
+@import url(../font/LeJeuneDeck-BlackItalic.ttf);
+@import url(../font/LeJeuneDeck-Bold.ttf);
+@import url(../font/LeJeuneDeck-Light.ttf);
+@import url(../font/LeJeuneDeck-LightItalic.ttf);
+@import url(../font/LeJeuneDeck-Medium.ttf);
+@import url(../font/LeJeuneDeck-MediumItalic.ttf);
+@import url(../font/LeJeuneDeck-Regular.ttf);
+@import url(../font/LeJeuneDeck-Semibold.ttf);
+@import url(../font/LeJeuneDeck-SemiboldItalic.ttf);
+@import url(../font/LeJeuneDeck-StencilRegular.ttf);
+
+:root{
+  --b-size01:12px;
+  --f-size01:14px;
+  --f-size02:16px;
+  --f-color01:#041E3A;
+  --f-color02:#fff;
+  --f-color03:#A19462;
+  --bg-color01:#1C2D24;
+  --bg-color02:#A19462;
+  --bg-color03:#041E3A;
+  --bg-color04:#fff;
+  --m-auto:0px auto;
+  --margin01:50px 0px;
+}
+body {
+  font-family: 'LeJeuneDeck', 'Noto Sans KR', arial, sans-serif;
+  font-size:var(--b-size01);
+  color: var(--f-color01);
+}
+a{
+  text-decoration: none;
+  color: var(--f-color01);
+  font-size: var(--f-size01);
+}
+

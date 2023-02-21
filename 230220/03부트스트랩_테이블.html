@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩_03레이블</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <h2>부트스트랩_03레이블</h2>
+  <p>부트스트랩에서 테이블 태그에는 약간의 셀안쪽 여백과 수평라인만 기본적용.</p>
+
+  <table class="table table-striped table-bordered table-hover table-responsive">
+    <caption>표설명이나 제목</caption>
+    <thead class="table-dark">
+      <tr><th>셀제목</th><th>셀제목</th><th>셀제목</th></tr>
+    </thead>
+    <tbody>
+      <tr class="bg-danger"><td>셀내용</td><td>셀내용</td><td>셀내용</td></tr>
+      <tr class="bg-success"><td>셀내용</td><td>셀내용</td><td>셀내용</td></tr>
+      <t class="bg-info"><td>셀내용</td><td>셀내용</td><td>셀내용</td></t>
+    </tbody>
+  </table>
+
+  <p>class="table":테이블 기본서식</p>
+  <p>class="table-striped":행마다 다른 색상을 적용.</p>
+  <p>class="table-bordered":테이블 셀 테두리 만들기</p>
+  <p>class="table-hover":마우스 오버시 배경색 변경</p>
+  <p>class="table-dark":테이블 제목줄(thead)에 배경색 어둡게 적용</p>
+  <p>class-"bg-success", class="bg-danger", class="bg-info", class="bg-warning", class="bg-acive":tr, td에 각각 분류색상을 적용할 수 있음.</p>
+  <p>class="table-responsive":화면의 너비가 768px미만일 경우 가로로 스크롤됨.</p>
+</body>
+</html>
